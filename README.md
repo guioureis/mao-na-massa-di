@@ -7,3 +7,7 @@ Delivery Infrastructure na prática
 
 * Servidor atual: *ec2-13-58-186-167.us-east-2.compute.amazonaws.com*
   * Enviar uma chave SSH pública para liberar acesso ao servidor
+
+## Desafios
+
+* [Desafio 1](desafios/D1.md)
