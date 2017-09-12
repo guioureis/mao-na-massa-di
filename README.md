@@ -11,3 +11,5 @@ Delivery Infrastructure na prática
 ## Desafios
 
 * [Desafio 1](desafios/D1.md)
+* [Desafio 2](desafios/D2.md)
+* [Desafio 3](desafios/D3.md)
