@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: no
+  pre_tasks:
+    - name: 'install python2'
+      raw: sudo apt-get -y install python-simplejson
+
+  tasks:
+  - name: update apt
+    apt:
+      update_cache: yes
