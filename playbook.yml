@@ -11,7 +11,6 @@
       update_cache: yes
 
   # Docker
-
   - name: ensure repository key is installed
     apt_key:
       id: "58118E89F3A912897C070ADBF76221572C52609D"
@@ -38,4 +37,27 @@
       state: started
       image: alpine
       command: date
-    
+
+  - name: Create nginx-proxy
+    docker_container:
+      name: "nginx-proxy"
+      image: jwilder/nginx-proxy
+      state: started
+      ports:
+        - "80:80"
+      volumes:
+        - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  - name: Include vars of users
+    include_vars:
+      file: users.yml
+      name: users
+
+  - name: Create containers for users
+    docker_container:
+      name: "{{ item.key }}-container"
+      env:
+        VIRTUAL_HOST: "{{ item.key }}.local"
+      state: present
+      image: alpine
+    with_dict: "{{ users }}"
