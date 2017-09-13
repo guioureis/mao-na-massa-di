@@ -61,3 +61,14 @@
       state: present
       image: alpine
     with_dict: "{{ users }}"
+
+  - name: Create container to test nginx
+    docker_container:
+      name: whoami
+      image: jwilder/whoami
+      expose:
+        - "8000"
+      env:
+        VIRTUAL_HOST: whoami.local
+        WEB_PORTS: 8000
+      state: started
