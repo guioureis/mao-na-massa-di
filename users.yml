@@ -1,5 +1,9 @@
 ---
 rodrigo:
   username: rmaia
+  pubkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtVw04Y5L4edixhXebEnNDWoAeGrbyYuNG8Ee/1yZiljRHnIqCmiCCCdghPPSWMFdSDJ+H4C2YOWJsfPQON0A0zNcTAmAGtFtS4z2CGl0+/D2WwDeePTm1fw2a7BhX+EN6DpEij/wq3Z8CFCyJln5/akCJimVcPD+AE1U4SdercWlgCQmfXXaI+SeNHo110Ts6YMmq3wdTjwWOUZ8kf5YMyhC5hZXkGLtiKZbK8gcNhprsKnDdwdm+SDGCVNCH4nxqtUMddpn2AETVRX0xifWbdxj66BSDZHhC53k//Pv1y6Xhps5EL+s9wyBbMVg2ZMRrALH/tsg3gj5Quld2ZaH7
+  port: 56666
 guilherme:
   username: greis
+  pubkey: 
+  port: 56667
