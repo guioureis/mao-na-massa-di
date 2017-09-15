@@ -38,37 +38,25 @@
       image: alpine
       command: date
 
-  - name: Create nginx-proxy
-    docker_container:
-      name: "nginx-proxy"
-      image: jwilder/nginx-proxy
-      state: started
-      ports:
-        - "80:80"
-      volumes:
-        - /var/run/docker.sock:/tmp/docker.sock:ro
-
   - name: Include vars of users
     include_vars:
       file: users.yml
       name: users
 
+  - name: copy
+    copy:
+      src: ./provision/Dockerfile
+      dest: /home/provision/
+
+  - name: build images for every user
+    docker_image:
+      name: "{{ item.key }}-image"
+      path: /home/provision
+    with_dict: "{{ users }}"
+
   - name: Create containers for users
     docker_container:
       name: "{{ item.key }}-container"
-      env:
-        VIRTUAL_HOST: "{{ item.key }}.local"
       state: present
-      image: alpine
+      image: "{{ item.key }}-image"
     with_dict: "{{ users }}"
-
-  - name: Create container to test nginx
-    docker_container:
-      name: whoami
-      image: jwilder/whoami
-      expose:
-        - "8000"
-      env:
-        VIRTUAL_HOST: whoami.local
-        WEB_PORTS: 8000
-      state: started
