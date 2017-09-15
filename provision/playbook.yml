@@ -40,5 +40,5 @@
 
   - name: Include vars of users
     include_vars:
-      file: users.yml
+      file: ../users.yml
       name: users
