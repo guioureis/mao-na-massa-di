@@ -1,14 +1,14 @@
 ---
 - hosts: all
   gather_facts: no
+  become: true
   pre_tasks:
-    - name: 'install python2'
-      raw: sudo apt-get -y install python-simplejson
 
   tasks:
-  - name: update apt
-    apt:
-      update_cache: yes
+
+  - name: 'install python2'
+    apt: 
+      name: python-simplejson
 
   # Docker
   - name: ensure repository key is installed
@@ -42,21 +42,3 @@
     include_vars:
       file: users.yml
       name: users
-
-  - name: copy
-    copy:
-      src: ./provision/Dockerfile
-      dest: /home/provision/
-
-  - name: build images for every user
-    docker_image:
-      name: "{{ item.key }}-image"
-      path: /home/provision
-    with_dict: "{{ users }}"
-
-  - name: Create containers for users
-    docker_container:
-      name: "{{ item.key }}-container"
-      state: present
-      image: "{{ item.key }}-image"
-    with_dict: "{{ users }}"
