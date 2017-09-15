@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"net/http"
 	"path/filepath"
 
 	"gopkg.in/yaml.v2"
@@ -11,7 +12,7 @@ import (
 type User struct {
 	Username string
 	Pubkey   string
-	Port     int
+	Port     string
 }
 
 type UserList struct {
@@ -33,6 +34,16 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("Value: %#v\n", userList.Users[0].Port)
 
+	url := "http://ec2-13-58-186-167.us-east-2.compute.amazonaws.com:"
+	for _, user := range userList.Users {
+		fmt.Print("\n" + user.Port + ": ")
+		resp, err := http.Get(url + user.Port)
+		if err != nil {
+			fmt.Print("Fail")
+		} else {
+			fmt.Print(resp.Status)
+		}
+	}
+	fmt.Println()
 }
