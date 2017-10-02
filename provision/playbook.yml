@@ -1,14 +1,45 @@
 ---
 - hosts: all
-  gather_facts: no
   become: true
-  pre_tasks:
 
   tasks:
+
+  - name: Make sure we have a 'wheel' group
+    group:
+      name: wheel
+      state: present
+
+  - name: Allow 'wheel' group to have passwordless sudo
+    lineinfile:
+      dest: /etc/sudoers
+      state: present
+      regexp: '^%wheel'
+      line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+
+  - name: Include vars of users
+    include_vars:
+      file: ../users.yml
+      name: users
+
+  - name: create a new user
+    user:
+      name="{{ item.username }}"
+      state=present
+      groups="wheel"
+      append=yes
+    with_items: "{{ users.users }}"
+
+  - name: adds key
+    authorized_key:
+      user: "{{ item.username }}"
+      state: present
+      key: "{{ item.pubkey }}"
+    with_items: "{{ users.users }}"
 
   - name: 'install python2'
     apt: 
       name: python-simplejson
+      update_cache: yes
 
   # Docker
   - name: ensure repository key is installed
@@ -26,7 +57,7 @@
   - service: name=docker state=restarted
 
   - name: install pip
-    apt: name=python-pip
+    apt: name=python3-pip
 
   - pip:
       name: docker-py
@@ -38,7 +69,3 @@
       image: alpine
       command: date
 
-  - name: Include vars of users
-    include_vars:
-      file: ../users.yml
-      name: users
