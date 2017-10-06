@@ -1,3 +1,4 @@
 .vagrant
 provision/*.log
 *.retry
+*.pem
