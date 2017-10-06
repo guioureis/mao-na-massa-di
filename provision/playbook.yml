@@ -57,7 +57,7 @@
   - service: name=docker state=restarted
 
   - name: install pip
-    apt: name=python3-pip
+    apt: name=python-pip
 
   - pip:
       name: docker-py
