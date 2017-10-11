@@ -24,6 +24,7 @@
   - name: create a new user
     user:
       name="{{ item.username }}"
+      shell="/bin/bash"
       state=present
       groups="wheel"
       append=yes
