@@ -35,7 +35,7 @@ func main() {
 		panic(err)
 	}
 
-	url := "http://ec2-13-58-186-167.us-east-2.compute.amazonaws.com:"
+  url := "http://ec2-18-221-178-11.us-east-2.compute.amazonaws.com:"
 	for _, user := range userList.Users {
 		fmt.Print("\n" + user.Port + ": ")
 		resp, err := http.Get(url + user.Port)
