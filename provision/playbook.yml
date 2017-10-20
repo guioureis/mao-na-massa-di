@@ -36,37 +36,3 @@
       state: present
       key: "{{ item.pubkey }}"
     with_items: "{{ users.users }}"
-
-  - name: 'install python2'
-    apt: 
-      name: python-simplejson
-      update_cache: yes
-
-  # Docker
-  - name: ensure repository key is installed
-    apt_key:
-      id: "58118E89F3A912897C070ADBF76221572C52609D"
-      keyserver: "hkp://p80.pool.sks-keyservers.net:80"
-      state: present
-
-  - name: ensure docker registry is available
-    apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-xenial main' state=present
-
-  - name: ensure docker and dependencies are installed
-    apt: name=docker-engine
-
-  - service: name=docker state=restarted
-
-  - name: install pip
-    apt: name=python-pip
-
-  - pip:
-      name: docker-py
-
-  - name: Container present
-    docker_container:
-      name: "testcontainer"
-      state: started
-      image: alpine
-      command: date
-
