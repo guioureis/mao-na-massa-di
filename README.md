@@ -45,3 +45,4 @@ Durante os desafios além da execução prática é importante aproveitar para e
 * [Desafio 2](desafios/D2.md)
 * [Desafio 3](desafios/D3.md)
 * [Desafio 4](desafios/D4.md)
+* [Desafio 5](desafios/D5.md)
