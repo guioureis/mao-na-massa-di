@@ -42,3 +42,6 @@ users:
   - username: mfreitas
     port: 55555
     pubkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDyHuwQpKCsYv+uB2CG6Mut8B9qo9JlVou2VWWf0i1uasNyjQFoQ6HZD2uVXHJ3KJucpG4+PHntDpuKLYkCSpcnHGNB3mZlQmvlu57Fz1nbStNhcGRU7++NLt7ziEOSUGCOpEB0E+e6z9WWvH+/5Dj5JdteoO1FclWnfAAQp7730gqMhPoT0fr/9toHLQHDILZhHmR7Uv3m892bY/xoxNHOYrsMt8gdGQqTAcHNNAKSb6Ae7jTjCR+5q+C8VC1mgKLYjCQhcpRX8nTVsIG3NaIAEVjUeMuuUAlkoKrzemY04/D5eO9+4smkbNcYhAUF/CvGY7c6znq17MotUX1cbNSj mfreitas@thoughtworks.com
+  - username: hmachado
+    port: 51982
+    pubkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgOdC2Q499OrLU5naN3skAKm8x6a/OXogucdVt/L8bnfgwVewXfVsSKjG2jF6iPqxTrTZMc6Oe5kc1arESUn3txWEOAOMLluNCFTpc/XM3QMUyoaQoeVJF5zVkVNBxve4iqB0NIiWdhqc/bAg2PfpDSIoAeY7wu16biBXbzcg+WtP7uJjZI8vu/8UUv0rsW4/rjfo4RFfrnHHD99moDXKLivmfjEzLR5Uy2AcSer/B7H0PnTyEPGjK3NpXtqOzWRvOJ6wv7HpUVJ5LwrpSmcc3306aoV7wXTA+6xr6SyDXP+sV3GrEiyNfvj95MUI+sD/CEUqSLH86VYjbgDpfwdv9 hugo@elementary
