@@ -1,21 +1,31 @@
-# Mão na massa DI
-Delivery Infrastructure na prática
+# Infraestrutura de Entrega na prática
+Bora por a mão na massa e entender os conceitos básicos de como montar uma Infraestrutura de Entrega de software.
+
+## Conteúdo
+
+#### [Introdução](#introdução)
+#### [Leituras Recomendadas](#leituras-recomendadas)
+#### [Mais informações](#mais-informações)
+#### I - O caminho à Produção
+1. [Primeira coisa: O que é essa tal de Produção](desafios/D1.md)
+2. [Da pra confiar?](desafios/D2.md)
+3. [Liberando nosso primeiro MVP](desafios/D3.md)
+4. [Eita, perdemos nosso servidor!](desafios/D4.md)
+5. [Automatizando os testes e a construção de nossa Aplicação](desafios/D5.md)
+6. [Automatizando nosso *Deploy*](desafios/D6.md)
+#### II - Existe vida depois de Prod?
+1. Hora de adicionar funcionalidades
+2. Monitoramento da Infra
+3. Escalando nossa Aplicação
+4. Monitoramento da Aplicação
+5. Vai aguentar?
+#### III - *Continua...* com Docker!
 
 ## Introdução
 
 Este repositório apresenta uma série de desafios para construirmos passo-a-passo uma plataforma de Delivery do zero.
 
 Todo o material é focado em Desenvolvedores de Software Web com o intuito de aproximar os mesmos das operações básicas necessarias para entregar uma aplicação Web resiliente, escalável e fácil de manter.
-
-Alguns dos temas a serem abordados:
-* Automação de deploy
-* Load Balancing
-* Provisionamento de servidores
-* Virtualização de servidores
-* Monitoramento de servidores e da aplicação
-* Docker
-* Orquestração de containers
-* Criação de clusters
 
 Durante os desafios além da execução prática é importante aproveitar para entender bem os conceitos envolvidos, pesquisar sobre as diferentes soluções disponíveis e acima de tudo se divertir. \o/
 
@@ -32,18 +42,6 @@ Durante os desafios além da execução prática é importante aproveitar para e
 * [The Twelve-Factor App](https://12factor.net/)
 * [Livro de Entrega Contínua](https://www.amazon.com.br/Entrega-Cont%C3%ADnua-Entregar-Software-Confi%C3%A1vel/dp/8582601034)
 
-## Informações importantes
-
-* Canal Slack: [#mao-na-massa-di-bh](https://thoughtworks.slack.com/archives/C6XAK94HL)
-
-* Servidor atual: *ec2-13-58-186-167.us-east-2.compute.amazonaws.com*
-  * Enviar uma chave SSH pública para liberar acesso ao servidor
-
-## Desafios
-
-* [Desafio 1](desafios/D1.md)
-* [Desafio 2](desafios/D2.md)
-* [Desafio 3](desafios/D3.md)
-* [Desafio 4](desafios/D4.md)
-* [Desafio 5](desafios/D5.md)
-* [Desafio 6](desafios/D6.md)
+## Mais Informações
+Junte-se ao time através do canal [#mao-na-massa-di-bh](https://thoughtworks.slack.com/archives/C6XAK94HL) no Slack da Thoughtworks.
+Caso tenha algum problema pode também enviar um email para greis@thoughtworks.com ou rmaia@thoughtworks.com
