@@ -3,9 +3,12 @@ Bora por a mão na massa e entender os conceitos básicos de como montar uma Inf
 
 ## Conteúdo
 
-#### [Introdução](#introdução)
-#### [Leituras Recomendadas](#leituras-recomendadas)
-#### [Mais informações](#mais-informações)
+[Introdução](#introdução)
+
+[Leituras Recomendadas](#leituras-recomendadas)
+
+[Mais informações](#mais-informações)
+
 #### I - O caminho à Produção
 1. [Primeira coisa: O que é essa tal de Produção](desafios/D1.md)
 2. [Da pra confiar?](desafios/D2.md)
