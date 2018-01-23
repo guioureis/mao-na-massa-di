@@ -21,11 +21,9 @@ Bora por a mão na massa e entender os conceitos básicos de como montar uma Inf
 5. [Automatizando os testes e a construção de nossa Aplicação](desafios/D5.md)
 6. [Automatizando nosso *Deploy*](desafios/D6.md)
 #### II - Existe vida depois de Prod?
-1. Hora de adicionar funcionalidades
+1. [Como evitar problemas de indisponibilidade](desafios/D7.md)
 2. Monitoramento da Infra
-3. Escalando nossa Aplicação
-4. Monitoramento da Aplicação
-5. Vai aguentar?
+
 #### III - *Continua...* com Docker!
 
 ## Introdução
@@ -47,11 +45,6 @@ Durante os desafios além da execução prática é importante aproveitar para e
 
 * Se trata de um caminho de aprendizagem, portanto é importante ter paciência para que possamos entender a evolução tanto dos problemas como das técnicas e soluções presentes em uma infraestrutura de entrega.
 * Os desafios possuem poucas informações exatamente para não influenciar tanto na solução dos problemas. O ideal é que cada pessoa possa propor soluções distintas baseada em sua leitura do assunto e pesquisa de soluções disponíveis.
-
-### Instrutores
-//TODO
-### Aprendizes
-//TODO
 
 ## Leituras Recomendadas
 
